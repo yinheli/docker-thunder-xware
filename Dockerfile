@@ -16,6 +16,6 @@ COPY start.sh /app/
 VOLUME /app/TDDOWNLOAD
 
 WORKDIR /app
-RUN chmod +x start.sh
+RUN chmod +x start.sh && chmod +x /app/bin/portal
 CMD ["./start.sh"]
 
