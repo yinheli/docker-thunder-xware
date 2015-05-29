@@ -11,11 +11,11 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
     mkdir -p /app/bin
 
-#COPY thunder /app/
+COPY thunder /app/
 COPY start.sh /app/
 VOLUME /app/TDDOWNLOAD
 
 WORKDIR /app
-RUN chmod +x start.sh && chmod +x /app/bin/portal
+RUN chmod +x start.sh && chmod +x ./bin/portal
 CMD ["./start.sh"]
 
