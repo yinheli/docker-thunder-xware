@@ -22,7 +22,7 @@ mkdir data
 ### 运行
 
 ```
-docker run -d --privileged=true \
+docker run -d \
         --name=xware \
         --net=host \
         -v $(pwd)/data:/app/TDDOWNLOAD \
